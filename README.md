@@ -1,27 +1,38 @@
-# Template repository for creating new Python Click CLI tools
+# click-app-template-repository-demo
 
-This GitHub [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template) can be used to create a new repository with the skeleton of a Python [Click](https://click.palletsprojects.com/) CLI tool, based on the [click-app](https://github.com/simonw/click-app) cookiecutter.
+[![PyPI](https://img.shields.io/pypi/v/click-app-template-repository-demo.svg)](https://pypi.org/project/click-app-template-repository-demo/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/click-app-template-repository-demo?include_prereleases&label=changelog)](https://github.com/simonw/click-app-template-repository-demo/releases)
+[![Tests](https://github.com/simonw/click-app-template-repository-demo/workflows/Test/badge.svg)](https://github.com/simonw/click-app-template-repository-demo/actions?query=workflow%3ATest)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/click-app-template-repository-demo/blob/master/LICENSE)
 
-Start here: https://github.com/simonw/click-app-template-repository/generate
+Demo of click-app-template-repository
 
-The name of your repository will be the name of the CLI tool, and also the name of the Python package that you publish to [PyPI](https://pypi.org/) - so make sure that name is not taken already!
+## Installation
 
-Add a one-line description of your CLI tool, then click "Create repository from template".
+Install this tool using `pip`:
 
-![Screenshot of the create repository interface](https://user-images.githubusercontent.com/9599/131272183-d2f1bb50-1ca1-42f2-936d-f23a6cbdbe13.png)
+    $ pip install click-app-template-repository-demo
 
-Once created, your new repository will execute a GitHub Actions workflow that uses cookiecutter to rewrite the repository to the desired state. This make take 30 seconds or so.
+## Usage
 
-You can see an example of a repository generated using this template here:
+Usage instructions go here.
 
-- https://github.com/simonw/click-app-template-repository-demo
+## Development
 
-## GitHub Actions setup by this repository
+To contribute to this tool, first checkout the code. Then create a new virtual environment:
 
-The `test.yml` GitHub Actions workflow will run your tests automatically any time you push a change to the repo.
+    cd click-app-template-repository-demo
+    python -m venv venv
+    source venv/bin/activate
 
-The `publish.yml` Action runs when you create a new GitHub release. It can build and upload your package to [PyPI](https://pypi.org/).
+Or if you are using `pipenv`:
 
-For this to work, you need to create an API token for your PyPI account and add that to your repository as a secret called `PYPI_TOKEN`.
+    pipenv shell
 
-See [Publishing your library as a package to PyPI](https://github.com/simonw/click-app#publishing-your-library-as-a-package-to-pypi) for details.
+Now install the dependencies and test dependencies:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest
